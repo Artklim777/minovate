@@ -1,0 +1,63 @@
+@import 'variables.less';
+
+.button {
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    user-select: none;
+
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: @button-padding;
+    color: @button-color;
+    border: @button-border;
+    font-size: @button-font-size;
+    font-weight: @button-font-weight;
+    background: @button-background;
+    font-family: @secondary-font-family;
+    margin-left: -4px;
+    &-up {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        bottom: 111px;
+        right: 29px;
+        padding: 0 12px;
+        font-size: 20px;
+        color: #fff;
+        z-index: 100;
+        outline-color: transparent;
+        border-radius: 5px;
+
+        &-icon {
+            -moz-transform: rotate(-90deg);
+            /* Для Firefox */
+            -ms-transform: rotate(-90deg);
+            /* Для IE */
+            -webkit-transform: rotate(-90deg);
+            /* Для Safari, Chrome, iOS */
+            -o-transform: rotate(-90deg);
+            /* Для Opera */
+            transform: rotate(-90deg);
+        }
+    }
+
+   
+    &:hover {
+        text-decoration: none;
+        
+    }
+    &:focus {
+       
+    }
+    &:active,
+    &.is-active {
+        
+    }
+}
+

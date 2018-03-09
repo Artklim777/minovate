@@ -1,0 +1,31 @@
+@import 'variables.less';
+
+.form {
+    &-group {
+        margin-bottom: @form-group-margin;
+    }
+    &-control {
+        margin: 0;
+        border-radius: 0;
+        font: inherit;
+        display: block;
+        width: 100%;
+        padding: @form-padding !important;
+        background-color: @form-background;
+        border: @form-border;
+        color: @form-color;
+        font-size: @form-size;
+
+        &:focus {}
+        &::placeholder {}
+    }
+    &-select {}
+    &-radio {}
+    &-checkbox {}
+    &-file {}
+}
+
+textarea.form-control {
+    height: auto;
+    resize: vertical;
+}

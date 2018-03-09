@@ -1,0 +1,159 @@
+.card {
+    display: block;
+    position:relative;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: 4px solid transparent;
+
+    &-hover {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        .zoom,.view {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            height: 45px;
+            width: 45px;
+            background-color: @global-third-background;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: #fff;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .view {
+            right: 0;
+        }
+    }
+    &:hover {
+
+        border-bottom: 4px solid #ebebeb;
+        img.card-image-normal {
+            display: none;
+        }
+        img.card-image-hover,
+        .card-hover {
+            display: block;
+        }
+        .card-add {
+            padding: 3px;
+            color: @color-primary;
+            border: 1px solid @color-primary;
+        }
+        .card-heading{
+            
+            color: @color-primary;
+        }
+    }
+   
+
+    &-header {
+        
+    }
+    &-body {
+      
+    }
+    &-footer {
+        display: block;
+        background-color: #fff;
+        padding-left: 19px;
+        padding-bottom: 26px;
+        padding-top: 30px;
+       
+    }
+    &-heading {
+        color: @global-color;
+        font-family: @global-font-family;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+        &-hover {}
+        
+    }
+    &-description {
+        color: @color-primary;
+        font-family: @global-font-family;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+       
+    }
+    &-add {
+        padding: 3px;
+        cursor: pointer;   
+        border: 1px solid transparent;
+        color: @color-light-grey;
+        font-family: @global-font-family;
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: "Myriad Pro";
+        font-weight: 400;
+        margin-left: 45px;
+        @media all and (max-width: 768px) {
+            margin-left: 150px;
+        }
+    }
+    &-image {
+        position: relative;
+        background-color: #fff;
+
+
+
+        img {
+            max-height: 280px;
+            display: block;
+            margin: 0 auto;
+        }
+       
+    }
+
+    &-hot,
+    &-sale,
+    &-new {
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: @secondary-font-family;
+        font-size: 11px;
+        z-index: 80;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 24px;
+        color: #fff;
+        padding-top: 5px;
+    } 
+    
+
+    &-hot {
+        background-color: @hot-bg;
+    }
+    &-sale {
+        background-color: @sale-bg;
+    }
+    &-new {
+        background-color: @new-bg;
+    }
+}
+
+
+img.card-image-hover {
+    display: none;
+}
+
+
+
+
+
